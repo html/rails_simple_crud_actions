@@ -1,0 +1,17 @@
+RailsSimpleCrudActions
+======================
+
+This plugin is an action pack for "actions" framework (see http://github.com/html/actions)
+It contains standard CRUD (index, new, edit, show, create, destroy, update) from standard rails scaffolding.
+
+
+Example
+=======
+
+class ArticlesController < ApplicationController
+  action :index, :new, :edit, :show, :create, :destroy, :update
+end
+
+This is equal to have standard scaffolded controller ArticlesController.
+
+Copyright (c) 2009 [name of plugin creator], released under the MIT license
