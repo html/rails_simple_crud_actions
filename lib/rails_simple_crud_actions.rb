@@ -88,7 +88,7 @@ module Actions
       instance_variable_set var, (item = model.find(params[:id]))
 
       respond_to do |format|
-        if item.update_attributes(params[:title])
+        if item.update_attributes(params[str.underscore.singularize])
           flash[:notice] = 'Title was successfully updated.'
           format.html { redirect_to(item) }
           format.xml  { head :ok }
