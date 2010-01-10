@@ -56,7 +56,7 @@ module Actions
 
       respond_to do |format|
         if item.save
-          flash[:notice] = 'Title was successfully created.'
+          flash[:notice] = str.camelize + ' was successfully created.'
           format.html { redirect_to(item) }
           format.xml  { render :xml => item, :status => :created, :location => item }
         else
@@ -89,7 +89,7 @@ module Actions
 
       respond_to do |format|
         if item.update_attributes(params[str.underscore.singularize])
-          flash[:notice] = 'Title was successfully updated.'
+          flash[:notice] = str.camelize + ' was successfully updated.'
           format.html { redirect_to(item) }
           format.xml  { head :ok }
         else
