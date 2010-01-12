@@ -72,6 +72,7 @@ module Actions
       model = str.singularize.camelize.constantize
 
       item = model.find(params[:id])
+      flash[:notice] = str.singularize + ' was successfully destroyed'
       item.destroy
 
       respond_to do |format|
