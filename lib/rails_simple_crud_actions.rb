@@ -56,7 +56,7 @@ module Actions
 
       respond_to do |format|
         if item.save
-          flash[:notice] = str.camelize + ' was successfully created.'
+          flash[:notice] = str.singularize.camelize + ' was successfully created.'
           format.html { redirect_to(item) }
           format.xml  { render :xml => item, :status => :created, :location => item }
         else
