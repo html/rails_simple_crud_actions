@@ -89,7 +89,7 @@ module Actions
 
       respond_to do |format|
         if item.update_attributes(params[str.underscore.singularize])
-          flash[:notice] = str.camelize + ' was successfully updated.'
+          flash[:notice] = str.singularize.camelize + ' was successfully updated.'
           format.html { redirect_to(item) }
           format.xml  { head :ok }
         else
